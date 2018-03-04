@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Contacts</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="todo">todo</string>
+    <string name="title_activity_display_contact">DisplayContact</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="name">Name</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_id">Email Id</string>
+    <string name="phone_no">Phone No</string>
+    <string name="save">Save</string>
+    <string name="nam">Name :-</string>
+    <string name="last_nam">Last Name :-</string>
+    <string name="emai">Email:-</string>
+    <string name="phone_n">Phone No:-</string>
+</resources>
