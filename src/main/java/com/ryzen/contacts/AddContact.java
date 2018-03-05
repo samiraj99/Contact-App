@@ -55,7 +55,7 @@ public class AddContact extends AppCompatActivity {
         final String LastName = lName.getText().toString();
         final String Email = emailId.getText().toString();
         final String PhNo = pNo.getText().toString();
-        if (FirstName.isEmpty()) { //title
+        if (FirstName.isEmpty()) {
             Toast.makeText(AddContact.this, "please enter a First Name!"
                     , Toast.LENGTH_SHORT).show();
             return;

@@ -9,6 +9,7 @@
     tools:showIn="@layout/activity_display_contact">
 
     <ListView
+        android:layout_marginTop="55dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/List_View"

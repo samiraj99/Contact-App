@@ -16,4 +16,5 @@
     <string name="last_nam">Last Name :-</string>
     <string name="emai">Email:-</string>
     <string name="phone_n">Phone No:-</string>
+    <string name="search">search..</string>
 </resources>
