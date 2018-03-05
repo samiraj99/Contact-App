@@ -22,6 +22,7 @@ import java.util.Comparator;
 public class DisplayContact extends AppCompatActivity {
     ListView listView;
     MaterialSearchView searchView;
+    FloatingActionButton fab;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +30,12 @@ public class DisplayContact extends AppCompatActivity {
         setContentView(R.layout.activity_display_contact);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Contact Search");
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
 
         searchView = findViewById(R.id.search_view);
         listView = findViewById(R.id.List_View);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+         fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,6 +68,17 @@ public class DisplayContact extends AppCompatActivity {
         });
 
 
+        searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
+            @Override
+            public void onSearchViewShown() {
+                fab.hide();
+            }
+
+            @Override
+            public void onSearchViewClosed() {
+                fab.show();
+            }
+        });
         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -80,7 +91,7 @@ public class DisplayContact extends AppCompatActivity {
                 {
                     ArrayList<Contact> fstFound = new ArrayList<>();
                     for (Contact item:contacts){
-                        if (item.getFirstName().contains(newText))
+                        if (item.getFirstName().toLowerCase().contains(newText.toLowerCase()))
                             fstFound.add(item);
                     }
                     ContactAdapter adapter = new ContactAdapter(DisplayContact.this,R.layout.contact_adapter,fstFound);
@@ -94,13 +105,13 @@ public class DisplayContact extends AppCompatActivity {
                             Intent viewCont = new Intent(getApplicationContext(),ViewContact.class);
                             viewCont.putExtra(Utilities.EXTRAS_NOTE_FILENAME,fileName);
                             startActivity(viewCont);
+                            searchView.closeSearch();
                         }
                     });
 
                 }
                 else{
-
-                    if(contacts != null &&contacts.size()>0)
+                    if(contacts !=null && contacts.size() > 0)
                     {
                         final ContactAdapter contactAdapter = new ContactAdapter(DisplayContact.this,R.layout.contact_adapter,contacts);
                         listView.setAdapter(contactAdapter);
@@ -113,6 +124,7 @@ public class DisplayContact extends AppCompatActivity {
                                 Intent viewCont = new Intent(getApplicationContext(),ViewContact.class);
                                 viewCont.putExtra(Utilities.EXTRAS_NOTE_FILENAME,fileName);
                                 startActivity(viewCont);
+                                searchView.closeSearch();
                             }
                         });
 
@@ -124,7 +136,7 @@ public class DisplayContact extends AppCompatActivity {
             return true;
             }
         });
-        if(contacts != null &&contacts.size()>0)
+        if(contacts !=null && contacts.size() > 0)
         {
             final ContactAdapter contactAdapter = new ContactAdapter(DisplayContact.this,R.layout.contact_adapter,contacts);
             listView.setAdapter(contactAdapter);
