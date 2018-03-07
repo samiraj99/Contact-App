@@ -7,12 +7,14 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.ryzen.contacts.DisplayContact"
     tools:showIn="@layout/activity_display_contact">
-
     <ListView
-        android:layout_marginTop="55dp"
+        android:divider="#ffffff"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/List_View"
-        >
+        android:id="@+id/List_View">
     </ListView>
 </LinearLayout>

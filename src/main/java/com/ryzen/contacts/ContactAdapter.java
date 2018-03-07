@@ -24,6 +24,7 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
         if(convertView==null){
             convertView = LayoutInflater.from(getContext())
                     .inflate(R.layout.contact_adapter,null);
