@@ -34,4 +34,5 @@
         android:contentDescription="@string/todo"
         app:srcCompat="@drawable/ic_contacts__icons_a"
         tools:ignore="VectorDrawableCompat" />
+
 </RelativeLayout>

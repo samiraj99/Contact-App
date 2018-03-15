@@ -3,26 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ryzen.contacts.AddContact">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add_contact"
-        android:textSize="35sp"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        />
+    tools:context="com.ryzen.contacts.AddContact"
+    android:paddingRight="14dp"
+    android:paddingLeft="14dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    >
 
     <EditText
+        android:id="@+id/FirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignLeft="@+id/LastName"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
-        android:hint="@string/first_name"
-        android:id="@+id/FirstName" />
+        android:layout_alignStart="@+id/LastName"
+        android:layout_marginTop="41dp"
+        android:hint="@string/first_name" />
 
     <EditText
         android:id="@+id/LastName"
@@ -58,14 +54,15 @@
         android:id="@+id/PhoneNo"
         android:inputType="phone"
         />
+
     <Button
+
+        android:id="@+id/Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/PhoneNo"
+        android:layout_below="@+id/PhoneNo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="65dp"
         android:text="@string/save"
-        android:textSize="18sp"
-        android:id="@+id/Save"
-        />
+        android:textSize="18sp" />
 </RelativeLayout>
