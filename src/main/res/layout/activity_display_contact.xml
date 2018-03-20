@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ryzen.contacts.DisplayContact">
+    tools:context="com.ryzen.contacts.DisplayContact"
+    >
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -24,7 +25,10 @@
         app:searchSuggestionIcon="@drawable/ic_suggestion"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        />
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingRight="@dimen/layout_padding" />
 
 
     <include layout="@layout/content_display_contact" />
