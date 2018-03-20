@@ -18,7 +18,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/LastName"
         android:layout_marginTop="41dp"
-        android:hint="@string/first_name" />
+        android:hint="@string/first_name"
+        android:inputType="text"
+        />
 
     <EditText
         android:id="@+id/LastName"
@@ -29,6 +31,7 @@
         android:layout_below="@+id/FirstName"
         android:layout_marginTop="16dp"
         android:hint="@string/last_name"
+        android:inputType="text"
         />
 
     <EditText
@@ -53,6 +56,7 @@
         android:hint="@string/phone_no"
         android:id="@+id/PhoneNo"
         android:inputType="phone"
+        android:maxLength="15"
         />
 
     <Button
