@@ -30,7 +30,6 @@
         android:paddingLeft="@dimen/layout_padding"
         android:paddingRight="@dimen/layout_padding" />
 
-
     <include layout="@layout/content_display_contact" />
 
     <android.support.design.widget.FloatingActionButton

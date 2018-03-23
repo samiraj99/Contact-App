@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,16 +8,16 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="55dp"
         android:text="@string/nam"
         android:textColor="#050505"
-        android:textSize="25sp" />
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="59dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/FirstName"
@@ -27,7 +27,10 @@
         android:layout_alignLeft="@+id/LastName"
         android:layout_alignStart="@+id/LastName"
         android:hint="@string/name"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="59dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
@@ -36,10 +39,12 @@
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="25dp"
         android:text="@string/last_nam"
         android:textColor="#050505"
-        android:textSize="25sp" />
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="129dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/LastName"
@@ -49,7 +54,10 @@
         android:layout_alignLeft="@+id/EmailId"
         android:layout_alignStart="@+id/EmailId"
         android:hint="@string/last_name"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="122dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView4"
@@ -58,22 +66,25 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="25dp"
         android:text="@string/emai"
         android:textColor="#050505"
-        android:textSize="25sp" />
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="202dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/EmailId"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView5"
-        android:layout_marginLeft="48dp"
-        android:layout_marginStart="48dp"
         android:layout_toEndOf="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
         android:hint="@string/email_id"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="202dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView5"
@@ -82,10 +93,12 @@
         android:layout_alignLeft="@+id/textView4"
         android:layout_alignStart="@+id/textView4"
         android:layout_below="@+id/textView4"
-        android:layout_marginTop="25dp"
         android:text="@string/phone_n"
         android:textColor="#050505"
-        android:textSize="25sp" />
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="289dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/PhoneNo"
@@ -96,6 +109,9 @@
         android:layout_alignLeft="@+id/EmailId"
         android:layout_alignStart="@+id/EmailId"
         android:hint="@string/phone_no"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="289dp"
+        tools:ignore="MissingConstraints" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
