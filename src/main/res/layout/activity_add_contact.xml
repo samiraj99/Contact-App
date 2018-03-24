@@ -10,17 +10,34 @@
     android:paddingBottom="@dimen/layout_padding"
     >
 
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_photo_camera_black_24dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/FirstName"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_person_black_24dp" />
+
     <EditText
         android:id="@+id/FirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/LastName"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/LastName"
-        android:layout_marginTop="41dp"
+        android:layout_below="@+id/picture"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="40dp"
         android:hint="@string/first_name"
-        android:inputType="text"
-        />
+        android:inputType="text" />
+
 
     <EditText
         android:id="@+id/LastName"
@@ -29,10 +46,22 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/FirstName"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
         android:hint="@string/last_name"
         android:inputType="text"
         />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/EmailId"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_email_black_30dp" />
+
 
     <EditText
         android:layout_width="match_parent"
@@ -40,10 +69,21 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/LastName"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
         android:hint="@string/email_id"
         android:id="@+id/EmailId"
         android:inputType="textEmailAddress"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/PhoneNo"
+        android:src="@drawable/ic_phone_iphone_black_24dp"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -52,7 +92,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/EmailId"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
         android:hint="@string/phone_no"
         android:id="@+id/PhoneNo"
         android:inputType="phone"
@@ -64,9 +105,11 @@
         android:id="@+id/Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/PhoneNo"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/save"
         android:textSize="18sp" />
+
+
 </RelativeLayout>

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class AddContact extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class AddContact extends AppCompatActivity {
     private String mFileName;
     private Contact mLoadContact = null;
     private boolean mIsViewingOrUpdating;
+    ImageView picture;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,6 @@ public class AddContact extends AppCompatActivity {
         lName = findViewById(R.id.LastName);
         emailId = findViewById(R.id.EmailId);
         pNo = findViewById(R.id.PhoneNo);
-
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +49,9 @@ public class AddContact extends AppCompatActivity {
                 mIsViewingOrUpdating = false;
             }
         }
+
     }
+
     private void validateAndSaveContact() {
 
         final String FirstName = fName.getText().toString();
@@ -75,7 +78,7 @@ public class AddContact extends AppCompatActivity {
             return;
         }
 
-        if(!mIsViewingOrUpdating && Utilities.CheckAlreadyExitsFile(this,FirstName) && Utilities.CheckAlreadyExitsFile(this,LastName))
+        if(!mIsViewingOrUpdating && Utilities.CheckAlreadyExitsFile(this,FirstName))
         {
             AlertDialog.Builder warning = new AlertDialog.Builder(this)
                     .setMessage("You already have a contact with this name. You can rename this contact "+"or save it anyway.")

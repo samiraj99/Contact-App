@@ -1,73 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ryzen.contacts.ViewContact"
     android:orientation="vertical"
-    android:paddingRight="10dp"
-    android:paddingLeft="10dp"
-    android:paddingBottom="10dp"
+    tools:context="com.ryzen.contacts.ViewContact">
 
-    >
-
-    <TextView
-        android:id="@+id/FirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/PhoneNo"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_marginBottom="48dp"
-        android:hint="@string/name"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/LastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/FirstName"
-        android:layout_alignBottom="@+id/FirstName"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:hint="@string/last_name"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/PhoneNo"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/EmailId"
-        android:layout_alignLeft="@+id/EmailId"
-        android:layout_alignStart="@+id/EmailId"
-        android:layout_marginBottom="60dp"
-        android:hint="@string/phone_no"
-        android:textSize="25sp" />
+        android:layout_height="match_parent"
+        android:layout_weight=".5">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="19dp" />
 
-    <TextView
-        android:id="@+id/EmailId"
+        <TextView
+            android:id="@+id/FirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="@string/name"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/LastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView2"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/FirstName"
+            android:layout_toRightOf="@+id/FirstName"
+            android:hint="@string/last_name"
+            android:textSize="27sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/FirstName"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/FirstName"
-        android:layout_marginBottom="68dp"
-        android:hint="@string/email_id"
-        android:textSize="25sp" />
+        android:layout_height="match_parent"
+        android:layout_weight=".5">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="18dp"
-        app:srcCompat="@drawable/color_cursor_white" />
+        <ImageButton
+            android:id="@+id/call"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_call_black_24dp"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:id="@+id/PhoneNo"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@+id/call"
+            android:layout_toEndOf="@+id/call"
+            android:layout_toRightOf="@+id/call"
+            android:hint="@string/phone_no"
+            android:textSize="23sp"
+            />
+
+        <ImageButton
+            android:id="@+id/email"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/call"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_email_black_24dp"
+            android:background="@android:color/transparent"
+            />
 
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/EmailId"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/email"
+            android:layout_toEndOf="@+id/email"
+            android:layout_toRightOf="@+id/email"
+            android:hint="@string/email_id"
+            android:layout_marginTop="0dp"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

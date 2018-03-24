@@ -15,7 +15,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        new CountDownTimer(5000,100) {
+        new CountDownTimer(500,100) {
             @Override
             public void onTick(long l) {
 

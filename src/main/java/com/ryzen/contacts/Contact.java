@@ -1,5 +1,7 @@
 package com.ryzen.contacts;
 
+import android.net.Uri;
+
 import java.io.Serializable;
 
 /**
@@ -14,7 +16,7 @@ public class Contact implements Serializable {
         LastName = lastName;
         Email = email;
         PhNo = phNo;
-    }
+   }
 
     public String getFirstName() {
         return FirstName;
@@ -31,7 +33,6 @@ public class Contact implements Serializable {
     public String getPhNo() {
         return PhNo;
     }
-
     public void setFirstName(String firstName) {
         FirstName = firstName;
     }
