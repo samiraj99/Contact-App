@@ -56,31 +56,29 @@ public class AddContact extends AppCompatActivity {
         final String Email = emailId.getText().toString();
         final String PhNo = pNo.getText().toString();
         if (FirstName.isEmpty()) {
-            Toast.makeText(AddContact.this, "please enter a First Name!"
+            Toast.makeText(AddContact.this, "Please enter the First Name!"
                     , Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (LastName.isEmpty()) { //content
-            Toast.makeText(AddContact.this, "please enter a Last Name!"
-                    , Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddContact.this, "Please enter the Last Name!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (Email.isEmpty()) { //content
-            Toast.makeText(AddContact.this, "please enter a Email!"
-                    , Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddContact.this, "Please enter the Email Id!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (PhNo.isEmpty()) { //content
-            Toast.makeText(AddContact.this, "please enter a Phone No!"
+            Toast.makeText(AddContact.this, "Please enter the Phone No!"
                     , Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if(!mIsViewingOrUpdating && Utilities.CheckAlreadyExitsFile(this,FirstName)) {
+        if(!mIsViewingOrUpdating && Utilities.CheckAlreadyExitsFile(this,FirstName) && Utilities.CheckAlreadyExitsFile(this,LastName))
+        {
             AlertDialog.Builder warning = new AlertDialog.Builder(this)
-                    .setMessage("You already have a contact with that name.You can rename this contact " +
-                            "or save it anyway.")
+                    .setMessage("You already have a contact with this name. You can rename this contact "+"or save it anyway.")
                     .setTitle("Rename Contact?")
                     .setPositiveButton("Rename",null)
                     .setNegativeButton("Save anyway", new DialogInterface.OnClickListener() {
@@ -103,7 +101,6 @@ public class AddContact extends AppCompatActivity {
         }
 
     }
-
 
 }
 

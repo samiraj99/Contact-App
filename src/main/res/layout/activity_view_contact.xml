@@ -1,117 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ryzen.contacts.ViewContact">
+    tools:context="com.ryzen.contacts.ViewContact"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="10dp"
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/nam"
-        android:textColor="#050505"
-        android:textSize="23sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="59dp"
-        tools:ignore="MissingConstraints" />
+    >
 
     <TextView
         android:id="@+id/FirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_alignLeft="@+id/LastName"
-        android:layout_alignStart="@+id/LastName"
+        android:layout_above="@+id/PhoneNo"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginBottom="48dp"
         android:hint="@string/name"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="59dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_below="@+id/textView"
-        android:text="@string/last_nam"
-        android:textColor="#050505"
-        android:textSize="23sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="129dp"
-        tools:ignore="MissingConstraints" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/LastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/EmailId"
-        android:layout_alignStart="@+id/EmailId"
+        android:layout_alignBaseline="@+id/FirstName"
+        android:layout_alignBottom="@+id/FirstName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
         android:hint="@string/last_name"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="122dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:text="@string/emai"
-        android:textColor="#050505"
-        android:textSize="23sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="202dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/EmailId"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView5"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
-        android:hint="@string/email_id"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="202dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4"
-        android:layout_below="@+id/textView4"
-        android:text="@string/phone_n"
-        android:textColor="#050505"
-        android:textSize="23sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="289dp"
-        tools:ignore="MissingConstraints" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/PhoneNo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView5"
-        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignBottom="@+id/EmailId"
         android:layout_alignLeft="@+id/EmailId"
         android:layout_alignStart="@+id/EmailId"
+        android:layout_marginBottom="60dp"
         android:hint="@string/phone_no"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="289dp"
-        tools:ignore="MissingConstraints" />
+        android:textSize="25sp" />
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/EmailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/FirstName"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/FirstName"
+        android:layout_marginBottom="68dp"
+        android:hint="@string/email_id"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        app:srcCompat="@drawable/color_cursor_white" />
+
+
+</RelativeLayout>
